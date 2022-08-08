@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css?family=Hind');
+
+:root{
+  --radius-1: 70%;
+  --radius-2: 30%;
+  --radius-3: 30%;
+  --radius-4: 70%;
+  --radius-5: 60%;
+  --radius-6: 40%;
+  --radius-7: 60%;
+  --radius-8: 40%;
+}
+
+body{ background: #e8e8e8; font: normal 18px/1 "Hind", sans-serif; }
+
+.blob{
+  width: 360px;
+  height: 360px;
+  border-radius: var(--radius-1) var(--radius-2) var(--radius-3) var(--radius-4) / var(--radius-5) var(--radius-6) var(--radius-7) var(--radius-8);
+  background-color: #21D4FD;
+  background-image: linear-gradient(19deg, #ff681c 0%, #CD7FE5 100%);
+  box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+  position: relative;
+  top: 20px; left: 20px;
+  z-index: -99;
+}
+
+@media screen and (max-width: 480px) {
+  .blob{
+    width: 120px;
+    height: 120px;
+  }
+  
+}

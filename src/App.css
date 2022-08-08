@@ -1,38 +1,189 @@
-.App {
-  text-align: center;
+body {
+    background: rgb(255, 242, 227) !important;
+    text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@media (min-width: 992px) {
+    .navbar li {
+        margin-left: 5em;
+        margin-right: 5em;
+    }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.content {
+    margin-top: 10%;
+}
+
+h2 {
+    padding: 40px;
+    margin-top: 20%;
+}
+
+.profile {
+    position: relative;
+    max-height: 350px;
+    border-radius: 100px;
+    margin-top: -42%;
+    margin-left: -30%;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Hind');
+
+:root {
+    --radius-1: 70%;
+    --radius-2: 30%;
+    --radius-3: 30%;
+    --radius-4: 70%;
+    --radius-5: 60%;
+    --radius-6: 40%;
+    --radius-7: 60%;
+    --radius-8: 40%;
+}
+
+body {
+    background: #e8e8e8;
+    font: normal 18px/1 "Hind", sans-serif;
+}
+
+.blob {
+    width: 360px;
+    height: 360px;
+    border-radius: var(--radius-1) var(--radius-2) var(--radius-3) var(--radius-4) / var(--radius-5) var(--radius-6) var(--radius-7) var(--radius-8);
+    background-color: #21D4FD;
+    background-image: linear-gradient(19deg, #ff681c 0%, #CD7FE5 100%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+    position: relative;
+    top: 12px;
+    left: 10px;
+    z-index: -99;
+}
+
+.about{
+    margin-top: 15%;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 20px auto;
+    width: 8vw;
+    height: 7vh;
+    border-radius: 75px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    font-weight: lighter;
+    letter-spacing: 2px;
+    transition: 1s box-shadow;
+    background: rgb(255, 242, 227);
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  li:hover {
+    box-shadow: 0 5px 35px 0px rgba(0,0,0,.1);
   }
-  to {
-    transform: rotate(360deg);
+  
+  li:hover::before, li:hover::after {
+    display: block;
+    content: '';
+    position: absolute;
+    width: 8vw;
+    height: 7vh;
+    background: #FDA8CF;
+    border-radius: 75px;
+    z-index: -1;
+    animation: 1s clockwise infinite;
   }
+  
+  li:hover:after {
+    background:  #ff681c;
+    animation: 2s counterclockwise infinite;
+  }
+  
+  @keyframes clockwise {
+    0% {
+      top: -5px;
+      left: 0;
+    }
+    12% {
+      top: -2px;
+      left: 2px;
+    }
+    25% {
+      top: 0;
+      left: 5px;    
+    }
+    37% {
+      top: 2px;
+      left: 2px;
+    }
+    50% {
+      top: 5px;
+      left: 0;    
+    }
+    62% {
+      top: 2px;
+      left: -2px;
+    }
+    75% {
+      top: 0;
+      left: -5px;
+    }
+    87% {
+      top: -2px;
+      left: -2px;
+    }
+    100% {
+      top: -5px;
+      left: 0;    
+    }
+  }
+  
+  @keyframes counterclockwise {
+    0% {
+      top: -5px;
+      right: 0;
+    }
+    12% {
+      top: -2px;
+      right: 2px;
+    }
+    25% {
+      top: 0;
+      right: 5px;    
+    }
+    37% {
+      top: 2px;
+      right: 2px;
+    }
+    50% {
+      top: 5px;
+      right: 0;    
+    }
+    62% {
+      top: 2px;
+      right: -2px;
+    }
+    75% {
+      top: 0;
+      right: -5px;
+    }
+    87% {
+      top: -2px;
+      right: -2px;
+    }
+    100% {
+      top: -5px;
+      right: 0;    
+    }
+  }
+@media screen and (max-width: 480px) {
+    .blob {
+        width: 120px;
+        height: 120px;
+    }
+
+    .profile {
+        max-height: 120px;
+    }
 }
