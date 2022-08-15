@@ -1,5 +1,5 @@
 import React from 'react'
-import Logo from '../constants/Images/Logo';
+
 const Header = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light">
@@ -11,13 +11,13 @@ const Header = () => {
       <div className="collapse navbar-collapse justify-content-center" id="navbarNav">
         <ul className="navbar-nav">
           <li className="nav-item">
-            <a className="nav-link" href="#">About me</a>
+            <a className="nav-link" href="#about-me">About me</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">Social</a>
+            <a className="nav-link" href="#social">Social</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">Contact me</a>
+            <a className="nav-link" href="#contact-me">Contact me</a>
           </li>
         </ul>
       </div>

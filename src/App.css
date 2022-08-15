@@ -1,6 +1,8 @@
 body {
     background: rgb(255, 242, 227) !important;
     text-align: center;
+    font-family: 'Montserrat', sans-serif;
+
 }
 
 @media (min-width: 992px) {
@@ -17,6 +19,7 @@ body {
 h2 {
     padding: 40px;
     margin-top: 20%;
+    color: rgb(75, 72, 67);
 }
 
 .profile {
@@ -24,7 +27,7 @@ h2 {
     max-height: 350px;
     border-radius: 100px;
     margin-top: -42%;
-    margin-left: -30%;
+    margin-left: -15%;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Hind');
@@ -50,7 +53,7 @@ body {
     height: 360px;
     border-radius: var(--radius-1) var(--radius-2) var(--radius-3) var(--radius-4) / var(--radius-5) var(--radius-6) var(--radius-7) var(--radius-8);
     background-color: #21D4FD;
-    background-image: linear-gradient(19deg, #ff681c 0%, #CD7FE5 100%);
+    background-image: linear-gradient(19deg, #ff681c 0%, #755250 100%);
     box-shadow: 0 0 10px rgba(0, 0, 0, .3);
     position: relative;
     top: 12px;
@@ -59,7 +62,7 @@ body {
 }
 
 .about{
-    margin-top: 15%;
+    margin: 16% 0;
 }
 
 li {
@@ -89,7 +92,7 @@ li {
     position: absolute;
     width: 8vw;
     height: 7vh;
-    background: #FDA8CF;
+    background: #755250;
     border-radius: 75px;
     z-index: -1;
     animation: 1s clockwise infinite;
@@ -177,6 +180,56 @@ li {
       right: 0;    
     }
   }
+
+.social{
+    margin: 20% 0%;
+}
+input, textarea{ 
+ border: none;
+ display: block;
+ background: transparent;
+ height: 40px;
+ background: transparent;
+ color: rgba(0, 0, 0, 0.8) !important;
+ font-size: 14px;
+ border-radius: 0px;
+ -webkit-box-shadow: none !important;
+ box-shadow: none !important;
+ border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+ margin: 12%;
+ width: 76%;
+ text-align: center;
+}
+textarea:focus, input:focus{
+  outline: none;
+  border-bottom: 1px solid #774329;
+}
+
+textarea{
+  height: 30%;
+  resize: none;
+}
+.mail-img{
+min-width: 100%;
+height: auto;
+overflow: hidden;
+}
+.social-header{
+  margin-bottom: 7%;
+}
+
+.contact{
+width: 78%;
+}
+.contact-me{
+  background: white;
+  margin: 5% 5%;
+}
+.button{
+  background:#D06033;
+  border-radius: 20px;
+  height: 8%;
+} 
 @media screen and (max-width: 480px) {
     .blob {
         width: 120px;
@@ -185,5 +238,11 @@ li {
 
     .profile {
         max-height: 120px;
+    }
+    text-area{
+      height: 20px;
+    }
+    button{
+      height: 20px;
     }
 }
