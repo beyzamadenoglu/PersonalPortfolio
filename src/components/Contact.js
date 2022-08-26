@@ -21,18 +21,18 @@ const Contact = () => {
     }
     return (
 
-        <div id= "contact-me" className="container-fluid contact">
+        <div id="contact-me" className="container-fluid contact">
             <div className="row g-0 contact-me">
-            <div className="col-6">
-                <form className="w-auto p-3 h-100" classref={form} onSubmit={sendEmail}>
-                    <input type="text" name="user_name" placeholder="Name"/>
-                    <input type="email" name="user_email" placeholder="Email" />
-                    <textarea name="message" placeholder='Your message'/>
-                    <input className="button" type="submit" value="Send" />
-                </form>
+                <div className="col-12 col-md-6" id="contact-form-container">
+                    <form className="w-auto p-3 h-100" classref={form} onSubmit={sendEmail} id="contact-me-form">
+                        <input type="text" name="user_name" placeholder="Name" />
+                        <input type="email" name="user_email" placeholder="Email" />
+                        <textarea name="message" placeholder='Your message' />
+                        <input className="button" type="submit" value="Send" />
+                    </form>
                 </div>
-                <div className="col-6">
-                    <img src={ContactImage}  className="img-fluid d-flex mail-img" alt="_contactimage"></img>
+                <div className="col-12 col-md-6">
+                    <img src={ContactImage} className="img-fluid d-flex mail-img" alt="_contactimage"></img>
                 </div>
             </div>
         </div>

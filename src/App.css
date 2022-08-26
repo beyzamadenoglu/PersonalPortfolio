@@ -2,7 +2,7 @@ body {
     background: rgb(255, 242, 227) !important;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
-
+    margin-bottom: 10vh;
 }
 
 @media (min-width: 992px) {
@@ -62,7 +62,19 @@ body {
 }
 
 .about{
-    margin: 16% 0;
+  margin-top: 20%;
+}
+.p-about{
+  margin: 0 20%;
+}
+.h-about{
+  margin-top: 5%;
+}
+
+#contact-me-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 li {
@@ -184,6 +196,7 @@ li {
 .social{
     margin: 20% 0%;
 }
+
 input, textarea{ 
  border: none;
  display: block;
@@ -196,41 +209,50 @@ input, textarea{
  -webkit-box-shadow: none !important;
  box-shadow: none !important;
  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
- margin: 12%;
- width: 76%;
  text-align: center;
 }
-textarea:focus, input:focus{
+
+textarea:focus, input:focus {
   outline: none;
   border-bottom: 1px solid #774329;
 }
 
-textarea{
+textarea {
   height: 30%;
   resize: none;
 }
 .mail-img{
-min-width: 100%;
-height: auto;
-overflow: hidden;
+  min-width: 100%;
+  height: auto;
+  overflow: hidden;
+  border-radius: 0 20px 20px 0;
+
 }
 .social-header{
   margin-bottom: 7%;
 }
 
 .contact{
-width: 78%;
+width: 78vw;
 }
 .contact-me{
   background: white;
-  margin: 5% 5%;
+  margin: 5px;
+  border-radius:20px;
 }
 .button{
-  background:#D06033;
-  border-radius: 20px;
-  height: 8%;
-} 
-@media screen and (max-width: 480px) {
+  background:#765353;
+  color: white !important;
+  border-radius: 15px;
+  height: 3em;
+  width: 40%;
+  text-align: center;
+}
+
+#contact-me-form {
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
     .blob {
         width: 120px;
         height: 120px;
@@ -239,10 +261,36 @@ width: 78%;
     .profile {
         max-height: 120px;
     }
-    text-area{
+
+    text-area {
       height: 20px;
     }
-    button{
+
+    button {
       height: 20px;
     }
+
+    .mail-img {
+      overflow: hidden;
+      border-radius: 0px 0px 20px 20px;
+      object-fit: cover;
+      height: 30vh;
+    }
+    .contact-me-form {
+      width: 50vh !important;
+    }
+
+    .contact-me {
+      height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    #contact-form-container {
+      height: 50vh;
+    }
+    .contact{
+      width: 95vw;
+      }
 }
