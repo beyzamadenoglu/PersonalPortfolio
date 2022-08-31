@@ -6,11 +6,12 @@ import ContactImage from "../constants/Images/mail.jpg";
 const Contact = () => {
 
     const form = useRef();
+    console.log(form);
 
     const sendEmail = (e) => {
         e.preventDefault();
 
-        emailjs.sendForm('service_sacc64d', '__ejs-test-mail-service__', form.current, 'uI-7LPI7UNgt0ijVt')
+        emailjs.sendForm('service_sacc64d', 'template_khh5d78', form.current, 'uI-7LPI7UNgt0ijVt')
             .then((result) => {
                 console.log(result.text);
                 e.target.reset();
@@ -22,13 +23,15 @@ const Contact = () => {
     return (
 
         <div id="contact-me" className="container-fluid contact">
-            <div className="row g-0 contact-me">
+            <div className="row g-0 contact-area">
                 <div className="col-12 col-md-6" id="contact-form-container">
-                    <form className="w-auto p-3 h-100" classref={form} onSubmit={sendEmail} id="contact-me-form">
+                    <form className="w-auto p-3 h-100" ref={form} onSubmit={sendEmail} id="contact-me-form">
                         <input type="text" name="user_name" placeholder="Name" />
                         <input type="email" name="user_email" placeholder="Email" />
                         <textarea name="message" placeholder='Your message' />
-                        <input className="button" type="submit" value="Send" />
+                        <div className="d-inline-flex justify-content-end ">
+                        <input className="sendbutton " type="submit" value="Send" />
+                        </div>
                     </form>
                 </div>
                 <div className="col-12 col-md-6">
