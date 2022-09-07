@@ -8,13 +8,80 @@ body {
 
 @media (min-width: 992px) {
   .nav-item {
-      margin-left: 5em;
-      margin-right: 5em;
+    margin-left: 5em;
+    margin-right: 5em;
   }
+}
+
+.medium-card-svg {
+  position: absolute;
+  left: 0;
+  z-index: -1;
+}
+
+.medium-card {
+  margin: 12vh 25% 0 25%;
+  background-color: white;
+  width: 50%;
+  border-radius: 0.625rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  transition: 0.5s;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  animation-delay: -1s;
+  cursor: pointer;
+
+}
+
+.medium-card:hover {
+  scale: 1.05;
+}
+
+.medium-img {
+  position: relative;
+  min-height: 13.3125rem;
+  border-top-left-radius: 0.625rem;
+  border-top-right-radius: 0.625rem;
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+
+.medium-img img {
+  width: 90%;
+  margin: 5%;
+  border-radius: 0.625rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+  display: inline-block;
+}
+
+.article-avatar img {
+  height: 10vh;
+  width: 10vh;
+  border-radius: 50%;
+  margin: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+}
+
+.article-avatar {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.medium-card p {
+  padding: 10px 30px;
 }
 
 .content {
   margin-top: 10%;
+}
+
+.centered {
+  display: flex;
+  width: 100%;
+
+  justify-content: center;
 }
 
 h2 {
@@ -64,30 +131,32 @@ body {
 }
 
 #profile-picture {
-width: 100%;
-height: auto;
-position: absolute;
-border-radius: var(--radius-1) var(--radius-2) var(--radius-3) var(--radius-4) / var(--radius-5) var(--radius-6) var(--radius-7) var(--radius-8);
-z-index: 2;
-top: -22%;
-left: 0;
-box-shadow: 0px 4px 0px 0px rgb(208, 96, 51);
+  width: 100%;
+  height: auto;
+  position: absolute;
+  border-radius: var(--radius-1) var(--radius-2) var(--radius-3) var(--radius-4) / var(--radius-5) var(--radius-6) var(--radius-7) var(--radius-8);
+  z-index: 2;
+  top: -22%;
+  left: 0;
+  box-shadow: 0px 4px 0px 0px rgb(208, 96, 51);
 }
 
 .about {
-margin-top: 20%;
+  margin-top: 20%;
 }
+
 .p-about {
-margin: 0 20%;
+  margin: 0 20%;
 }
+
 .h-about {
-margin-top: 5%;
+  margin-top: 5%;
 }
 
 #contact-me-form {
-display: flex;
-flex-direction: column;
-justify-content: space-evenly;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .nav-link {
@@ -108,10 +177,11 @@ justify-content: space-evenly;
 }
 
 .nav-link:hover {
-  box-shadow: 0 5px 35px 0px rgba(0,0,0,.1);
+  box-shadow: 0 5px 35px 0px rgba(0, 0, 0, .1);
 }
 
-.nav-link:hover::before, .nav-link:hover::after {
+.nav-link:hover::before,
+.nav-link:hover::after {
   display: block;
   content: '';
   position: absolute;
@@ -124,7 +194,7 @@ justify-content: space-evenly;
 }
 
 .nav-link:hover:after {
-  background:  #ff681c;
+  background: #ff681c;
   animation: 2s counterclockwise infinite;
 }
 
@@ -133,37 +203,45 @@ justify-content: space-evenly;
     top: -5px;
     left: 0;
   }
+
   12% {
     top: -2px;
     left: 2px;
   }
+
   25% {
     top: 0;
-    left: 5px;    
+    left: 5px;
   }
+
   37% {
     top: 2px;
     left: 2px;
   }
+
   50% {
     top: 5px;
-    left: 0;    
+    left: 0;
   }
+
   62% {
     top: 2px;
     left: -2px;
   }
+
   75% {
     top: 0;
     left: -5px;
   }
+
   87% {
     top: -2px;
     left: -2px;
   }
+
   100% {
     top: -5px;
-    left: 0;    
+    left: 0;
   }
 }
 
@@ -172,109 +250,127 @@ justify-content: space-evenly;
     top: -5px;
     right: 0;
   }
+
   12% {
     top: -2px;
     right: 2px;
   }
+
   25% {
     top: 0;
-    right: 5px;    
+    right: 5px;
   }
+
   37% {
     top: 2px;
     right: 2px;
   }
+
   50% {
     top: 5px;
-    right: 0;    
+    right: 0;
   }
+
   62% {
     top: 2px;
     right: -2px;
   }
+
   75% {
     top: 0;
     right: -5px;
   }
+
   87% {
     top: -2px;
     right: -2px;
   }
+
   100% {
     top: -5px;
-    right: 0;    
+    right: 0;
   }
 }
 
-.social{
+.social {
   margin: 20% 0%;
 }
 
-input, textarea{ 
-border: none;
-display: block;
-background: transparent;
-height: 40px;
-background: transparent;
-color: rgba(0, 0, 0, 0.8) !important;
-font-size: 14px;
-border-radius: 0px;
--webkit-box-shadow: none !important;
-box-shadow: none !important;
-border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-text-align: center;
-}
-
-textarea:focus, input:focus {
-outline: none;
-border-bottom: 1px solid #774329;
-}
-textarea:focus::placeholder, input:focus::placeholder  {
-color: transparent;
-} 
+input,
 textarea {
-height: 30%;
-resize: none;
+  border: none;
+  display: block;
+  background: transparent;
+  height: 40px;
+  background: transparent;
+  color: rgba(0, 0, 0, 0.8) !important;
+  font-size: 14px;
+  border-radius: 0px;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
-.mail-img{
-min-width: 100%;
-height: auto;
-overflow: hidden;
-border-radius: 0 20px 20px 0;
+
+textarea:focus,
+input:focus {
+  outline: none;
+  border-bottom: 1px solid #774329;
+}
+
+textarea:focus::placeholder,
+input:focus::placeholder {
+  color: transparent;
+}
+
+textarea {
+  height: 30%;
+  resize: none;
+}
+
+.mail-img {
+  min-width: 100%;
+  height: auto;
+  overflow: hidden;
+  border-radius: 0 20px 20px 0;
 
 }
-.social-header{
-margin-bottom: 7%;
+
+.social-header {
+  margin-bottom: 7%;
 }
 
-.contact{
-width: 78vw;
+.contact {
+  width: 75vw;
 }
-.contact-area{
-background: white;
-margin: 5px;
-border-radius:20px;
+
+.contact-area {
+  background: white;
+  margin: 0px 5px;
+  border-radius: 20px;
 }
-.sendbutton{
-background:#765353;
-color: white !important;
-border-radius: 15px;
-height: 3em;
-width: 40%;
-text-align: center;
+
+.sendbutton {
+  background: #765353;
+  color: white !important;
+  border-radius: 15px;
+  height: 3em;
+  width: 40%;
+  text-align: center;
 }
 
 #contact-me-form {
-text-align: center;
+  text-align: center;
 }
+
 @media screen and (max-width: 768px) {
   .blob {
-      width: 120px;
-      height: 120px;
+    width: 120px;
+    height: 120px;
   }
 
   .profile {
-      max-height: 120px;
+    max-height: 120px;
   }
 
   text-area {
@@ -287,22 +383,20 @@ text-align: center;
     object-fit: cover;
     height: 30vh;
   }
+
   .contact-me-form {
     width: 50vh !important;
   }
 
   .contact-me {
-    height: 80vh;
+    height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
 
-  #contact-form-container {
-    height: 50vh;
-  }
 
   .contact {
-    width: 95vw;
+    width: 90vw;
   }
 }
