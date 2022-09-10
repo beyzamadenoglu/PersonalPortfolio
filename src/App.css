@@ -187,7 +187,7 @@ body {
 }
 
 .nav-link:hover {
-  box-shadow: 0 5px 35px 0px rgba(0, 0, 0, .1);
+  box-shadow: 0 5px 10px 0px rgba(0, 0, 0, .1);
 }
 
 .nav-link:hover::before,
@@ -210,7 +210,7 @@ body {
 
 @keyframes clockwise {
   0% {
-    top: -5px;
+    top: -3px;
     left: 0;
   }
 
@@ -230,7 +230,7 @@ body {
   }
 
   50% {
-    top: 5px;
+    top: 3px;
     left: 0;
   }
 
@@ -250,14 +250,14 @@ body {
   }
 
   100% {
-    top: -5px;
+    top: -3px;
     left: 0;
   }
 }
 
 @keyframes counterclockwise {
   0% {
-    top: -5px;
+    top: -3px;
     right: 0;
   }
 
@@ -277,7 +277,7 @@ body {
   }
 
   50% {
-    top: 5px;
+    top: 3px;
     right: 0;
   }
 
@@ -297,7 +297,7 @@ body {
   }
 
   100% {
-    top: -5px;
+    top: -3px;
     right: 0;
   }
 }
@@ -407,4 +407,21 @@ textarea {
   .contact {
     width: 90vw;
   }
+
+  .medium-container {
+    width: 90%;
+    margin-top: 10%;
+  }
+
+  .nav-link,
+  .nav-link:hover,
+  .nav-link:hover::before,
+  .nav-link:hover::after  {
+    animation: unset;
+    box-shadow: unset;
+    transition: unset;
+    width: auto;
+    height: auto;
+  }
+
 }
