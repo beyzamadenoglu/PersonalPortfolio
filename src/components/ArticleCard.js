@@ -7,7 +7,7 @@ function ArticleCard(props) {
         window.open(url, '_blank', 'noopener,noreferrer');
     }
     return (
-        <div className="col-12 col-md-6 medium-container">
+        <div className="col-12 col-md-3 medium-container">
             <div className="medium-card" onClick={() => OpenArticle(props.link)}>
                 <div className="medium-img">
                 <img src={props.thumbnail} alt="haha">
@@ -23,7 +23,6 @@ function ArticleCard(props) {
                     </img>
                    
                 </div>
-
                 </div>
             </div>
         </div>

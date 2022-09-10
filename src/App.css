@@ -15,22 +15,25 @@ body {
 
 .medium-card-svg {
   position: absolute;
-  left: 0;
+  overflow: hidden;
   z-index: -1;
+  left: 0;
 }
 
 .medium-card {
-  margin: 12vh 25% 0 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: white;
-  width: 50%;
   border-radius: 0.625rem;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   transition: 0.5s;
   box-shadow: 0 5px 15px rgba(0,0,0,0.08);
   animation-delay: -1s;
-  cursor: pointer;
-
+  cursor: pointer; 
+  position: relative;
+  height: 105%;
 }
 
 .medium-card:hover {
@@ -45,6 +48,7 @@ body {
   background-size: cover;
   background-position: 50%;
   background-repeat: no-repeat;
+  display:flex;
 }
 
 .medium-img img {
@@ -52,7 +56,6 @@ body {
   margin: 5%;
   border-radius: 0.625rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, .3);
-  display: inline-block;
 }
 
 .article-avatar img {
@@ -61,12 +64,14 @@ body {
   border-radius: 50%;
   margin: 15px;
   box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+  flex-direction: column-revers;
 }
 
 .article-avatar {
   width: 100%;
   display: flex;
   flex-direction: row-reverse;
+
 }
 
 .medium-card p {
@@ -80,12 +85,11 @@ body {
 .centered {
   display: flex;
   width: 100%;
-
   justify-content: center;
 }
 
 h2 {
-  padding: 40px;
+  padding: 0 40px;
   margin-top: 20%;
   color: rgb(75, 72, 67);
 }
@@ -107,6 +111,12 @@ h2 {
 body {
   background: #e8e8e8;
   font: normal 18px/1 "Hind", sans-serif;
+}
+
+.medium-container {
+  width: 30%;
+  margin: 0 auto;
+  padding-top: 7%;
 }
 
 #blob-container {
@@ -331,9 +341,7 @@ textarea {
 .mail-img {
   min-width: 100%;
   height: auto;
-  overflow: hidden;
   border-radius: 0 20px 20px 0;
-
 }
 
 .social-header {
@@ -351,7 +359,7 @@ textarea {
 }
 
 .sendbutton {
-  background: #765353;
+  background: #f28f60;
   color: white !important;
   border-radius: 15px;
   height: 3em;
