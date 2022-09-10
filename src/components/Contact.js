@@ -6,16 +6,13 @@ import ContactImage from "../constants/Images/mail.jpg";
 const Contact = () => {
 
     const form = useRef();
-    console.log(form);
 
     const sendEmail = (e) => {
         e.preventDefault();
 
         emailjs.sendForm('service_sacc64d', 'template_khh5d78', form.current, 'uI-7LPI7UNgt0ijVt')
             .then((result) => {
-                console.log(result.text);
                 e.target.reset();
-                console.log("sent")
             }, (error) => {
                 console.log(error.text);
             });

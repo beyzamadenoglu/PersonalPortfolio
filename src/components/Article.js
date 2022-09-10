@@ -48,10 +48,10 @@ class Article extends Component {
             isloading: false
           }),
           () => {
-            console.log(this.state);
+            //console.log(this.state);
           }
         );
-        console.log(data, res);
+        //console.log(data, res);
       })
       .catch((e) => {
         this.setState({ error: e.toJSON() })
