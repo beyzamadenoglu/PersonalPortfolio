@@ -10,19 +10,18 @@ function ArticleCard(props) {
         <div className="col-12 col-md-3 medium-container">
             <div className="medium-card" onClick={() => OpenArticle(props.link)}>
                 <div className="medium-img">
-                <img src={props.thumbnail} alt="haha">
-                </img>
+                    <img src={props.thumbnail} alt="haha">
+                    </img>
                 </div>
-
                 <div>
-                <p>{`${ToText(
+                    <p>{`${ToText(
                         props.description.substring(0, 600)
                     )}...`}</p>
-                <div className="article-avatar">
-                    <img src={props.avatar} alt="image-here">
-                    </img>
-                   
-                </div>
+                    <div className="article-avatar">
+                        <img src={props.avatar} alt="image-article">
+                        </img>
+
+                    </div>
                 </div>
             </div>
         </div>

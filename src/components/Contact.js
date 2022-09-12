@@ -27,7 +27,7 @@ const Contact = () => {
                         <input type="email" name="user_email" placeholder="Email" />
                         <textarea name="message" placeholder='Your message' />
                         <div className="d-inline-flex justify-content-end ">
-                        <input className="sendbutton " type="submit" value="Send" />
+                            <input className="sendbutton " type="submit" value="Send" />
                         </div>
                     </form>
                 </div>
