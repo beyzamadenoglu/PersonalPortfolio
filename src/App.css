@@ -79,11 +79,15 @@ body {
   width: 100%;
   display: flex;
   flex-direction: row-reverse;
+}
 
+.article-header {
+  margin-top: 20%;
 }
 
 .medium-card p {
   padding: 10px 30px;
+  line-height: 1.6;
 }
 
 .content {
@@ -96,8 +100,7 @@ body {
   justify-content: center;
 }
 
-h2 {
-
+.about-text{
   margin-top: 20%;
   color: rgb(75, 72, 67);
 }
