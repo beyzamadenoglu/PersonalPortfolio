@@ -461,4 +461,8 @@ textarea {
     line-height: unset;
   }
 
+  .p-about{
+    margin: 0 3%;
+  }
+
 }
