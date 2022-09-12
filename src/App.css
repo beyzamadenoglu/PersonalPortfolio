@@ -29,9 +29,9 @@ body {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   transition: 0.5s;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
   animation-delay: -1s;
-  cursor: pointer; 
+  cursor: pointer;
   position: relative;
   height: 105%;
 }
@@ -48,7 +48,7 @@ body {
   background-size: cover;
   background-position: 50%;
   background-repeat: no-repeat;
-  display:flex;
+  display: flex;
 }
 
 .medium-img img {
@@ -89,7 +89,7 @@ body {
 }
 
 h2 {
-  padding: 0 40px;
+
   margin-top: 20%;
   color: rgb(75, 72, 67);
 }
@@ -401,7 +401,6 @@ textarea {
     justify-content: space-between;
   }
 
-
   .contact {
     width: 90vw;
   }
@@ -414,12 +413,34 @@ textarea {
   .nav-link,
   .nav-link:hover,
   .nav-link:hover::before,
-  .nav-link:hover::after  {
+  .nav-link:hover::after {
     animation: unset;
     box-shadow: unset;
     transition: unset;
     width: auto;
     height: auto;
+  }
+
+  input,
+  textarea {
+    line-height: 4;
+  }
+
+  #blob-container {
+    width: 31vw;
+    height: 31vw;
+  }
+
+  #profile-picture {
+    top: -13%;
+  }
+
+  #blob-picture{
+    top: 11px;
+  }
+
+  .sendbutton {
+    line-height: unset;
   }
 
 }
