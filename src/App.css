@@ -374,7 +374,9 @@ textarea {
   height: 3em;
   width: 40%;
   text-align: center;
+  cursor: pointer;
 }
+
 
 #contact-me-form {
   text-align: center;
@@ -462,7 +464,15 @@ textarea {
   }
 
   .p-about{
-    margin: 0 3%;
+    margin: 10% 3%;
   }
 
+  .about {
+    margin-top: 46%;
+}
+
+
+input, textarea {
+    line-height: 1.2;
+}
 }
