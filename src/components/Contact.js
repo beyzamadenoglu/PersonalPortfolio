@@ -13,7 +13,6 @@ const Contact = () => {
 
       function handleChange(event) {
         const value = event.target.value;
-        console.log("new value", event.target.value);
         setState({
           ...state,
           [event.target.name]: value
