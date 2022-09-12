@@ -157,10 +157,8 @@ body {
 
 .p-about {
   margin: 0 20%;
-}
-
-.h-about {
-  margin-top: 5%;
+  line-height: 1.5;
+  margin-top: 3%;
 }
 
 #contact-me-form {
