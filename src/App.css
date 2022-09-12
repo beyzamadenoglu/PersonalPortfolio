@@ -369,6 +369,13 @@ textarea {
   text-align: center;
 }
 
+.footer{
+  text-align: center;
+  margin-top: 15%;
+  margin-bottom: 0;
+  color: rgb(75, 72, 67);
+}
+
 @media screen and (max-width: 768px) {
   .blob {
     width: 120px;

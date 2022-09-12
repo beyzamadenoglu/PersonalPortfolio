@@ -7,8 +7,9 @@ import About from "./components/About";
 import Social from "./components/Social";
 import Contact from "./components/Contact";
 import Article from "./components/Article";
+import Footer from "./components/Footer";
+
 function App() {
- 
   return (
     <div className="App">
       <header className="App-header">
@@ -19,6 +20,7 @@ function App() {
         <Article />
         <Social />
         <Contact />
+        <Footer />
     </div>
   );
 }

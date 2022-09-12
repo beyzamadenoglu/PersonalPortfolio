@@ -1,6 +1,7 @@
 import React from 'react'
 import Blob from "../constants/Images/Blob";
 import Profile from "../constants/Images/superfoto.png";
+
 const Content = () => {
     return (
         <div className="container-lg content">
