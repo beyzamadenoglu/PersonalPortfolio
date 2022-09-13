@@ -20,14 +20,6 @@ body {
   left: 0;
 }
 
-.navbar{
-  background:  rgb(255, 242, 227) !important;
-}
-
-.navbar-toggler-icon:focus::after{
-  box-shadow:none;
-}
-
 .medium-card {
   display: flex;
   flex-direction: column;
@@ -104,7 +96,6 @@ body {
   margin-top: 20%;
   color: rgb(75, 72, 67);
 }
-
 
 @import url('https://fonts.googleapis.com/css?family=Hind');
 
