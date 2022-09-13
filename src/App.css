@@ -13,6 +13,49 @@ body {
   }
 }
 
+.rnc__notification-item--success {
+  background-color: var(--default);
+  border-left: 8px solid var(--default-dark);
+}
+
+.rnc__notification-item--success .rnc__notification-timer {
+  background-color: var(--default);
+  border-left: 8px solid var(--default-dark);
+}
+.rnc__notification-timer-filler {
+  background-color: var(--default);
+}
+.rnc__notification-close-mark {
+  background-color: var(--default);
+}
+
+.rnc__notification-item--success .rnc__notification-timer {
+  background-color: white;
+}
+
+
+.rnc__notification-item--danger {
+  background-color: var(--danger-dark);
+  border-left: 8px solid var(--danger-dark);
+}
+
+.rnc__notification-item--danger .rnc__notification-timer {
+  background-color: var(--danger);
+  border-left: 8px solid var(--danger-dark);
+}
+
+.rnc__notification-timer-filler {
+  background-color: white;
+}
+
+.rnc__notification-close-mark {
+  background-color: white;
+}
+
+.rnc__notification-item--danger .rnc__notification-timer {
+  background-color: white;
+}
+
 .medium-card-svg {
   position: absolute;
   overflow: hidden;
@@ -64,7 +107,7 @@ body {
   border-radius: 50%;
   margin: 15px;
   box-shadow: 0 0 10px rgba(0, 0, 0, .3);
-  flex-direction: column-revers;
+  flex-direction: column-reverse;
 }
 
 .article-avatar {
@@ -108,6 +151,11 @@ body {
   --radius-6: 40%;
   --radius-7: 60%;
   --radius-8: 40%;
+  --danger: #c65b54 !important;
+  --danger-dark: #c65b54 !important;
+  --default: #7aa17e;
+  --default-dark: #688a6b;
+
 }
 
 body {
@@ -364,8 +412,15 @@ textarea {
   border-radius: 15px;
   height: 3em;
   width: 40%;
+  line-height: unset;
   text-align: center;
   cursor: pointer;
+  margin-top: 18px;
+}
+
+.sendbutton:disabled {
+  background-color: #cccccc;
+  color: #666666;
 }
 
 
@@ -432,10 +487,16 @@ textarea {
     height: auto;
   }
 
-  input,
   textarea {
-    line-height: 4;
+    height: 7em;
+    margin: 1em;
   }
+
+  input{
+    height: 2.4em;
+    margin: 1em;
+   }
+
 
   #blob-container {
     width: 31vw;
@@ -462,8 +523,9 @@ textarea {
     margin-top: 46%;
 }
 
-
-input, textarea {
-    line-height: 1.2;
-}
+  .sendbutton {
+    height: 2em;
+    line-height: unset;
+    margin-top: 1em;
+  }
 }

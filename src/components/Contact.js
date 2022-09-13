@@ -1,15 +1,19 @@
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 
+import { Store } from 'react-notifications-component';
+
 import ContactImage from "../constants/Images/mail.jpg";
 
 const Contact = () => {
+    const MESSAGE_MIN_LENGTH = 50;
+    const FORM_INITIAL_STATE = {
+        user_name: '',
+        user_email: '',
+        message: ''
+       }
 
-    const [state, setState] = React.useState({
-       user_name: '',
-       user_email: '',
-       message: ''
-      })
+    const [state, setState] = React.useState(FORM_INITIAL_STATE)
 
       function handleChange(event) {
         const value = event.target.value;
@@ -24,13 +28,54 @@ const Contact = () => {
     const sendEmail = (e) => {
         e.preventDefault();
 
-
-        emailjs.sendForm('service_sacc64d', 'template_khh5d78', form.current, 'uI-7LPI7UNgt0ijVt')
-            .then((result) => {
-                e.target.reset();
+        if (state.message.length < MESSAGE_MIN_LENGTH) {
+            Store.addNotification({
+                title: "Cant send!",
+                message: `Message should longer than ${MESSAGE_MIN_LENGTH} characters`,
+                type: "danger",
+                insert: "top",
+                container: "top-right",
+                animationIn: ["animate__animated", "animate__fadeIn"],
+                animationOut: ["animate__animated", "animate__fadeOut"],
+                dismiss: {
+                  duration: 5000,
+                  onScreen: true
+                }
+              });
+            return false;
+        } else {
+            emailjs.sendForm('service_sacc64d', 'template_khh5d78', form.current, 'uI-7LPI7UNgt0ijVt')
+            .then(() => {
+                setState(FORM_INITIAL_STATE);
+                Store.addNotification({
+                    title: "Success!",
+                    message: "Your message sent!",
+                    type: "success",
+                    insert: "top",
+                    container: "top-right",
+                    animationIn: ["animate__animated", "animate__fadeIn"],
+                    animationOut: ["animate__animated", "animate__fadeOut"],
+                    dismiss: {
+                      duration: 5000,
+                      onScreen: true
+                    }
+                  });
             }, (error) => {
-                console.log(error.text);
-            });
+                Store.addNotification({
+                    title: "Error!",
+                    message: "Could not send your message!",
+                    type: "danger",
+                    insert: "top",
+                    container: "top-right",
+                    animationIn: ["animate__animated", "animate__fadeIn"],
+                    animationOut: ["animate__animated", "animate__fadeOut"],
+                    dismiss: {
+                      duration: 5000,
+                      onScreen: true
+                    }
+                  });
+            });            
+        }
     }
     return (
 
@@ -40,9 +85,9 @@ const Contact = () => {
                     <form className="w-auto p-3 h-100" ref={form} onSubmit={sendEmail} id="contact-me-form">
                         <input type="text" name="user_name"  value={state.user_name} placeholder="Name" onChange={handleChange}/>
                         <input type="email" name="user_email" value={state.user_email}  placeholder="Email" onChange={handleChange} />
-                        <textarea name="message" placeholder='Your message' value={state.message} onChange={handleChange} />
+                        <textarea name="message" placeholder='Your message' value={state.message} onChange={handleChange}></textarea>
                         <div className="d-inline-flex justify-content-end ">
-                            <input className="sendbutton " type="submit" disabled ={!state.message} value="Send" />
+                            <input className="sendbutton" type="submit" disabled={!(state.message && state.user_name && state.user_email)} value="Send" />
                         </div>
                     </form>
                 </div>

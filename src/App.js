@@ -1,4 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
+import { ReactNotifications } from 'react-notifications-component';
+import 'react-notifications-component/dist/theme.css'
 
 import "./App.css"
 import Header from "./components/Header";
@@ -12,6 +14,7 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <div className="App">
+      <ReactNotifications />
       <header className="App-header">
         <Header />
       </header>
