@@ -354,6 +354,11 @@ body {
   margin: 20% 0%;
 }
 
+.social .row {
+  display: flex;
+  justify-content: center;
+} 
+
 input,
 textarea {
   border: none;
