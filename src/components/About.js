@@ -12,11 +12,10 @@ const About = () => {
         <div className="col-12">
           <p className="p-about">
             Hi, it's me Beyza Madenoğlu. I graduated from Istanbul Aydin
-            University Computer Engineering Department in June 2021. I had been
+            University Computer Engineering Department in June 2021. I was
             working as a Software QA Engineer in a squad which provides Call
-            Center Solutions at Vodafone for more than a year, now I am working
-            as a Frontend Developer. I develop apps with JavaScript,
-            React and Vue.
+            Center Solutions at Vodafone since June 2021, now I am working as a
+            Frontend Developer. I develop apps with JavaScript, React and Vue.
           </p>
         </div>
       </div>

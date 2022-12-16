@@ -1,8 +1,7 @@
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
-
+import env from "react-dotenv";
 import { Store } from 'react-notifications-component';
-
 import ContactImage from "../constants/Images/mail.jpg";
 
 const Contact = () => {
@@ -13,7 +12,7 @@ const Contact = () => {
         message: ''
        }
 
-    const [state, setState] = React.useState(FORM_INITIAL_STATE)
+    const [state, setState] = React.useState(FORM_INITIAL_STATE);
 
       function handleChange(event) {
         const value = event.target.value;
@@ -27,7 +26,6 @@ const Contact = () => {
 
     const sendEmail = (e) => {
         e.preventDefault();
-
         if (state.message.length < MESSAGE_MIN_LENGTH) {
             Store.addNotification({
                 title: "Cant send!",
@@ -44,7 +42,7 @@ const Contact = () => {
               });
             return false;
         } else {
-            emailjs.sendForm('service_sacc64d', 'template_khh5d78', form.current, 'uI-7LPI7UNgt0ijVt')
+            emailjs.sendForm(env.SERVICE_ID, env.TEMPLATE_ID, form.current, env.PUBLIC_KEY)
             .then(() => {
                 setState(FORM_INITIAL_STATE);
                 Store.addNotification({
