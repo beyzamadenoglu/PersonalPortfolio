@@ -23,9 +23,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-dotenv && react-scripts start", 
-    "build": "react-dotenv && react-scripts build", 
-    "serve": "react-dotenv && serve build", 
+    "start": "react-dotenv && react-scripts start",
+    "build": "react-dotenv && react-scripts build",
+    "serve": "react-dotenv && serve build",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -50,8 +50,12 @@
     "node-sass": "^7.0.3",
     "sass-loader": "^13.0.2"
   },
-
   "react-dotenv": {
-    "whitelist": ["SERVICE_ID", "PUBLIC_KEY", "PRIVATE_KEY", "TEMPLATE_ID"]
+    "whitelist": [
+      "SERVICE_ID",
+      "PUBLIC_KEY",
+      "PRIVATE_KEY",
+      "TEMPLATE_ID"
+    ]
   }
 }
