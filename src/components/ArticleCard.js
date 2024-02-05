@@ -10,7 +10,7 @@ function ArticleCard(props) {
         <div className="col-12 col-md-3 medium-container">
             <div className="medium-card" onClick={() => OpenArticle(props.link)}>
                 <div className="medium-img">
-                    <img src={props.thumbnail} alt="haha">
+                    <img src={props.thumbnail} alt="medium-img">
                     </img>
                 </div>
                 <div>
